@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.building {
+  border: 5px solid black;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-areas:
+    'floor5 floor5 floor5 .'
+    'floor4 floor4 floor4 .'
+    'floor3 floor3 floor3 .'
+    'floor2 floor2 floor2 .'
+    'floor1 floor1 floor1 elevator';
+}
+
+.floor {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.floor__1 {
+  grid-area: floor1;
+}
+
+.floor__2 {
+  grid-area: floor2;
+}
+
+.floor__3 {
+  grid-area: floor3;
+}
+
+.floor__4 {
+  grid-area: floor4;
+}
+
+.floor__5 {
+  grid-area: floor5;
+}
+
+button {
+  padding: 0 2em;
+}
+
+.elevator {
+  grid-area: elevator;
+  border: 1px solid black;
+}
+
+.slideUp1 {
+  animation: elevatorUp1 2s;
+}
+
+.slideUp2 {
+  animation: elevatorUp2 2s;
+}
+
+.slideUp3 {
+  animation: elevatorUp3 2s;
+}
+
+.slideUp4 {
+  animation: elevatorUp4 2s;
+}
+
+/** UP 1 FLOOR **/
+@keyframes elevatorUp1 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+/** UP 2 FLOORS **/
+@keyframes elevatorUp2 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200%);
+  }
+}
+
+/** UP 3 FLOORS **/
+@keyframes elevatorUp3 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-300%);
+  }
+}
+
+/** UP 4 FLOORS **/
+@keyframes elevatorUp4 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-400%);
+  }
+}
+
+.slideDown1 {
+  animation: elevatorDown1 2s;
+}
+
+.slideDown2 {
+  animation: elevatorDown2 2s;
+}
+
+.slideDown3 {
+  animation: elevatorDown3 2s;
+}
+
+.slideDown4 {
+  animation: elevatorDown4 2s;
+}
+
+/** DOWN 1 FLOOR **/
+@keyframes elevatorDown1 {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+/** DOWN 2 FLOOR **/
+@keyframes elevatorDown2 {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translateY(200%);
+  }
+}
+
+/** DOWN 3 FLOOR **/
+@keyframes elevatorDown3 {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translateY(300%);
+  }
+}
+
+/** DOWN 4 FLOOR **/
+@keyframes elevatorDown4 {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translateY(400%);
+  }
+}
